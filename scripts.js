@@ -196,7 +196,7 @@ const datosTerapeutas = {
     gabriel: {
         nombre: "Gabriel Masip",
         especialidad: "Terapeuta en Medicina China, Fitoterapia y Movimiento Funcional y Energético",
-        imagen: "img/gabriel.jpg",
+        imagen: "img/gabriel-.jpg",
         contenido: `
             <div class="contenido-terapeuta-modal">
                 <div class="header-terapeuta">
