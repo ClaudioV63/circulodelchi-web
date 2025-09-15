@@ -1,0 +1,130 @@
+/* Archivo CSS Principal - Círculo del Chi */
+/* Importa todos los módulos CSS en el orden correcto */
+
+/* 1. Variables y configuración */
+@import url('css/variables.css');
+
+/* 2. Estilos base y reset */
+@import url('css/base.css');
+
+/* 3. Layout y estructura */
+@import url('css/layout.css');
+
+/* 4. Componentes específicos */
+@import url('css/componentes.css');
+
+/* 5. Animaciones y efectos */
+@import url('css/animaciones.css');
+
+/* Estilos adicionales específicos del modal */
+.titulo-modal {
+    font-size: var(--texto-3xl);
+    color: var(--color-acento);
+    margin-bottom: var(--espacio-lg);
+    text-align: center;
+}
+
+.subtitulo-modal {
+    font-size: var(--texto-lg);
+    color: var(--texto-secundario);
+    margin-bottom: var(--espacio-xl);
+    text-align: center;
+    font-style: italic;
+}
+
+.contenido-servicio-modal {
+    display: grid;
+    gap: var(--espacio-xl);
+}
+
+.imagen-servicio-modal {
+    text-align: center;
+}
+
+.imagen-modal {
+    max-width: 300px;
+    width: 100%;
+    border-radius: var(--radio-lg);
+    box-shadow: var(--sombra-media);
+}
+
+.texto-servicio-modal h3 {
+    color: var(--color-acento);
+    margin-bottom: var(--espacio-md);
+}
+
+.texto-servicio-modal h4 {
+    color: var(--texto-principal);
+    margin-top: var(--espacio-lg);
+    margin-bottom: var(--espacio-md);
+}
+
+.texto-servicio-modal ul {
+    margin-left: var(--espacio-lg);
+    margin-bottom: var(--espacio-lg);
+}
+
+.texto-servicio-modal li {
+    margin-bottom: var(--espacio-sm);
+    color: var(--texto-secundario);
+}
+
+.precio-servicio {
+    background: var(--gradiente-dorado);
+    padding: var(--espacio-lg);
+    border-radius: var(--radio-lg);
+    text-align: center;
+    margin-top: var(--espacio-xl);
+}
+
+.precio {
+    font-size: var(--texto-xl);
+    font-weight: 600;
+    color: var(--fondo-principal);
+}
+
+.botones-modal {
+    display: flex;
+    gap: var(--espacio-lg);
+    justify-content: center;
+    margin-top: var(--espacio-xl);
+    flex-wrap: wrap;
+}
+
+/* Notificaciones */
+.notificacion {
+    box-shadow: var(--sombra-fuerte);
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Modo móvil optimizado */
+.modo-movil .yin-yang-simbolo {
+    animation-duration: 30s;
+}
+
+.modo-movil .servicio-item {
+    animation: none;
+}
+
+.modo-movil .circulo-central-servicios::before,
+.modo-movil .circulo-central-servicios::after {
+    display: none;
+}
+
+/* Responsive adicional */
+@media (max-width: 768px) {
+    .contenido-servicio-modal {
+        grid-template-columns: 1fr;
+    }
+    
+    .botones-modal {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .botones-modal .boton-primario,
+    .botones-modal .boton-secundario {
+        width: 100%;
+        max-width: 300px;
+    }
+}

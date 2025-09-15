@@ -1,0 +1,903 @@
+/* Componentes y Secciones Específicas */
+
+/* Símbolo Yin-Yang */
+.yin-yang-simbolo {
+    width: var(--tamaño-yin-yang);
+    height: var(--tamaño-yin-yang);
+    border-radius: var(--radio-circular);
+    position: relative;
+    background: var(--yang-color);
+    border: 3px solid var(--color-acento);
+    box-shadow: var(--sombra-dorada);
+    animation: rotacionSuave 20s linear infinite;
+    opacity: 0.6;
+}
+
+.yin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--yin-color);
+    border-radius: 150px 0 0 150px;
+}
+
+.yin::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    right: -37.5px;
+    width: 75px;
+    height: 75px;
+    background: var(--yin-color);
+    border-radius: var(--radio-circular);
+}
+
+.yin::after {
+    content: '';
+    position: absolute;
+    bottom: 25%;
+    right: -37.5px;
+    width: 75px;
+    height: 75px;
+    background: var(--yang-color);
+    border-radius: var(--radio-circular);
+}
+
+.punto-yin {
+    position: absolute;
+    top: 37.5px;
+    right: 112.5px;
+    width: 25px;
+    height: 25px;
+    background: var(--yang-color);
+    border-radius: var(--radio-circular);
+}
+
+.punto-yang {
+    position: absolute;
+    bottom: 37.5px;
+    left: 112.5px;
+    width: 25px;
+    height: 25px;
+    background: var(--yin-color);
+    border-radius: var(--radio-circular);
+}
+
+/* Tarjetas de Filosofía */
+.tarjeta-filosofia {
+    background: rgba(52, 73, 94, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: var(--radio-xl);
+    padding: var(--espacio-2xl);
+    text-align: center;
+    transition: var(--transicion-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta-filosofia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradiente-dorado);
+    transform: scaleX(0);
+    transition: var(--transicion-normal);
+}
+
+.tarjeta-filosofia:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-dorada);
+}
+
+.tarjeta-filosofia:hover::before {
+    transform: scaleX(1);
+}
+
+.icono-filosofia {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--espacio-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circulo-chi {
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--color-acento);
+    border-radius: var(--radio-circular);
+    position: relative;
+    animation: pulsarSuave 3s ease-in-out infinite;
+}
+
+.circulo-chi::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background: var(--color-acento);
+    border-radius: var(--radio-circular);
+    transform: translate(-50%, -50%);
+}
+
+.simbolo-yin-yang-pequeno {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radio-circular);
+    background: var(--yang-color);
+    border: 2px solid var(--color-acento);
+    position: relative;
+}
+
+.simbolo-yin-yang-pequeno::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--yin-color);
+    border-radius: 30px 0 0 30px;
+}
+
+.simbolo-manos-curativas {
+    width: 60px;
+    height: 60px;
+    background: var(--gradiente-dorado);
+    border-radius: var(--radio-lg);
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.simbolo-manos-curativas::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background: var(--fondo-principal);
+    border-radius: var(--radio-circular);
+    transform: translate(-50%, -50%);
+}
+
+.titulo-tarjeta {
+    font-size: var(--texto-2xl);
+    color: var(--color-acento);
+    margin-bottom: var(--espacio-md);
+}
+
+.descripcion-tarjeta {
+    font-size: var(--texto-base);
+    line-height: 1.7;
+    color: var(--texto-secundario);
+}
+
+/* Grid de Servicios - Layout más claro */
+.grid-servicios-circular {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacio-2xl);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--espacio-2xl);
+}
+
+.servicio-central {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circulo-central-servicios {
+    width: 120px;
+    height: 120px;
+    background: var(--gradiente-dorado);
+    border-radius: var(--radio-circular);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--sombra-dorada);
+    animation: pulsarSuave 4s ease-in-out infinite;
+}
+
+.texto-central {
+    font-family: var(--fuente-china);
+    font-size: var(--texto-4xl);
+    color: var(--fondo-principal);
+    font-weight: 500;
+}
+
+.servicio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transicion-normal);
+    padding: var(--espacio-lg);
+    border-radius: var(--radio-xl);
+    background: rgba(52, 73, 94, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.servicio-item:hover {
+    background: rgba(52, 73, 94, 0.4);
+    border-color: var(--color-acento);
+    box-shadow: var(--sombra-dorada);
+}
+
+/* Posicionamiento específico en el grid */
+.servicio-item:nth-child(2) { grid-column: 1; grid-row: 1; }
+.servicio-item:nth-child(3) { grid-column: 2; grid-row: 1; }
+.servicio-item:nth-child(4) { grid-column: 3; grid-row: 1; }
+.servicio-item:nth-child(5) { grid-column: 1; grid-row: 2; }
+.servicio-item:nth-child(6) { grid-column: 3; grid-row: 2; }
+.servicio-item:nth-child(7) { grid-column: 1; grid-row: 3; }
+.servicio-item:nth-child(8) { grid-column: 2; grid-row: 3; }
+.servicio-item:nth-child(9) { grid-column: 3; grid-row: 3; }
+.servicio-item:nth-child(10) { grid-column: 2; grid-row: 4; }
+
+.icono-servicio {
+    width: var(--tamaño-servicio-icono);
+    height: var(--tamaño-servicio-icono);
+    border-radius: var(--radio-circular);
+    background: rgba(52, 73, 94, 0.8);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--color-acento);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--espacio-md);
+    transition: var(--transicion-normal);
+    overflow: hidden;
+}
+
+.imagen-servicio {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radio-circular);
+}
+
+.icono-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radio-md);
+    background: var(--gradiente-dorado);
+}
+
+.icono-placeholder.acupuntura { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+.icono-placeholder.masaje { background: linear-gradient(135deg, #3498db, #2980b9); }
+.icono-placeholder.ventosas { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+.icono-placeholder.moxibustion { background: linear-gradient(135deg, #e67e22, #d35400); }
+.icono-placeholder.qigong { background: linear-gradient(135deg, #27ae60, #229954); }
+.icono-placeholder.reflexologia { background: linear-gradient(135deg, #f39c12, #e67e22); }
+.icono-placeholder.auriculoterapia { background: linear-gradient(135deg, #1abc9c, #16a085); }
+.icono-placeholder.dietetica { background: linear-gradient(135deg, #34495e, #2c3e50); }
+
+.servicio-item:hover .icono-servicio {
+    transform: scale(1.1);
+    box-shadow: var(--sombra-dorada);
+}
+
+.titulo-servicio {
+    font-size: var(--texto-lg);
+    font-weight: 600;
+    color: var(--texto-principal);
+    text-align: center;
+    margin: var(--espacio-md) 0 var(--espacio-xs) 0;
+}
+
+.descripcion-servicio {
+    font-size: var(--texto-base);
+    color: var(--texto-secundario);
+    text-align: center;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Modal de Servicio */
+.modal-servicio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transicion-normal);
+}
+
+.modal-servicio.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.titulo-modal {
+    font-size: var(--texto-2xl);
+    color: var(--color-acento);
+    margin-bottom: var(--espacio-lg);
+    font-weight: 600;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.subtitulo-modal {
+    font-size: var(--texto-lg);
+    color: var(--texto-secundario);
+    margin-bottom: var(--espacio-md);
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.contenido-modal {
+    background: var(--fondo-secundario);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: var(--radio-xl);
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.8);
+    transition: var(--transicion-normal);
+}
+
+.modal-servicio.activo .contenido-modal {
+    transform: scale(1);
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: var(--espacio-sm);
+    right: var(--espacio-lg);
+    background: none;
+    border: none;
+    font-size: var(--texto-2xl);
+    color: var(--color-acento);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radio-circular);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicion-normal);
+}
+
+.cerrar-modal:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.cuerpo-modal {
+    padding: 0;
+}
+
+/* Contenido del modal de servicios */
+.contenido-servicio-modal {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.imagen-servicio-modal {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: var(--radio-xl) var(--radio-xl) 0 0;
+}
+
+.imagen-modal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-servicio-modal {
+    padding: 2rem 1rem 0 3rem;
+    background: var(--fondo-secundario);
+    border-radius: 0 0 var(--radio-xl) var(--radio-xl);
+    flex: 1;
+}
+
+.texto-servicio-modal h3 {
+    font-size: var(--texto-2xl);
+    color: var(--color-acento);
+    margin-bottom: var(--espacio-lg);
+    font-weight: 600;
+    text-align: center;
+}
+
+.texto-servicio-modal p {
+    font-size: var(--texto-base);
+    color: var(--texto-secundario);
+    line-height: 1.7;
+    margin-bottom: var(--espacio-xl);
+    text-align: center;
+}
+
+.texto-servicio-modal h4 {
+    font-size: var(--texto-lg);
+    color: var(--texto-principal);
+    font-weight: 600;
+}
+
+.texto-servicio-modal ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--espacio-xl);
+}
+
+.texto-servicio-modal li {
+    position: relative;
+    padding-left: var(--espacio-xl);
+    margin-bottom: var(--espacio-sm);
+    color: var(--texto-secundario);
+    line-height: 1.6;
+}
+
+.texto-servicio-modal li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--color-acento);
+    font-weight: bold;
+}
+
+.precio-servicio {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: var(--radio-lg);
+    padding: var(--espacio-lg);
+    text-align: center;
+    margin-top: var(--espacio-xl);
+}
+
+.precio {
+    font-size: var(--texto-lg);
+    font-weight: 600;
+    color: var(--color-acento);
+    display: block;
+}
+
+.botones-modal {
+    display: flex;
+    gap: var(--espacio-md);
+    margin-bottom: 2rem;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.botones-modal button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Tarjetas de Equipo */
+.tarjeta-terapeuta {
+    background: rgba(52, 73, 94, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: var(--radio-xl);
+    padding: var(--espacio-xl);
+    text-align: center;
+    transition: var(--transicion-normal);
+}
+
+.tarjeta-terapeuta:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-dorada);
+}
+
+.imagen-terapeuta {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--espacio-lg);
+    border-radius: var(--radio-circular);
+    overflow: hidden;
+    border: 3px solid var(--color-acento);
+}
+
+.imagen-terapeuta-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radio-circular);
+}
+
+.placeholder-imagen {
+    width: 100%;
+    height: 100%;
+    background: var(--gradiente-dorado);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nombre-terapeuta {
+    font-size: var(--texto-xl);
+    color: var(--color-acento);
+    margin-bottom: var(--espacio-sm);
+}
+
+.especialidad-terapeuta {
+    font-size: var(--texto-base);
+    color: var(--texto-principal);
+    font-weight: 500;
+    margin-bottom: var(--espacio-md);
+}
+
+.descripcion-terapeuta {
+    font-size: var(--texto-sm);
+    color: var(--texto-secundario);
+    line-height: 1.6;
+}
+
+/* Sección de Contacto */
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xl);
+    position: relative;
+}
+
+.info-contacto::before {
+    content: '';
+    position: absolute;
+    top: 200px;
+    left: -120px;
+    width: 650px;
+    height: 650px;
+    background-image: url('../img/bambu.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.70;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.item-contacto {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espacio-lg);
+}
+
+.icono-contacto {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radio-circular);
+    background: var(--gradiente-dorado);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icono-contacto i {
+    font-size: var(--texto-xl);
+    color: var(--fondo-principal);
+}
+
+.texto-contacto h4 {
+    font-size: var(--texto-lg);
+    color: var(--color-acento);
+    margin-bottom: var(--espacio-sm);
+}
+
+.texto-contacto p {
+    color: var(--texto-secundario);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.enlace-whatsapp {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicion-normal);
+}
+
+.enlace-whatsapp:hover {
+    color: var(--texto-principal);
+    text-decoration: underline;
+}
+
+.enlace-ws {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicion-normal);
+    background: none;
+    border: none;
+}
+
+.enlace-ws:hover {
+    transform: translateY(-2px);
+}
+
+.creditos-diseno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espacio-sm);
+    margin-top: var(--espacio-md);
+    text-align: center;
+}
+
+.texto-creditos {
+    font-size: var(--texto-sm);
+    color: var(--texto-secundario);
+    font-weight: 300;
+}
+
+.logo-nexserver {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 0;
+    object-fit: contain;
+}
+
+/* Acciones de Terapeuta */
+.acciones-terapeuta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--espacio-lg);
+    gap: var(--espacio-sm);
+}
+
+.boton-conocer-mas {
+    background: transparent;
+    color: var(--color-acento);
+    border: 2px solid var(--color-acento);
+    padding: var(--espacio-sm) var(--espacio-md);
+    border-radius: var(--radio-md);
+    font-size: var(--texto-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicion-normal);
+    letter-spacing: 0.5px;
+    width: auto;
+    margin: 0;
+    display: inline-block;
+}
+
+.boton-conocer-mas:hover {
+    background: var(--gradiente-dorado);
+    color: var(--fondo-principal);
+    box-shadow: var(--sombra-dorada);
+}
+
+.boton-whatsapp-terapeuta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: #25D366;
+    color: white;
+    border-radius: var(--radio-circular);
+    font-size: var(--texto-lg);
+    transition: var(--transicion-normal);
+    text-decoration: none;
+}
+
+.boton-whatsapp-terapeuta:hover {
+    background: #20b358;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    text-decoration: none;
+}
+
+/* Estilos para modal de terapeuta */
+.contenido-terapeuta-modal {
+    padding: var(--espacio-lg);
+}
+
+.header-terapeuta {
+    display: flex;
+    gap: var(--espacio-xl);
+    margin-bottom: var(--espacio-2xl);
+    align-items: center;
+}
+
+.imagen-terapeuta-modal {
+    width: 120px;
+    height: 120px;
+    border-radius: var(--radio-circular);
+    object-fit: cover;
+    border: 3px solid var(--color-acento);
+    flex-shrink: 0;
+}
+
+.info-header-terapeuta {
+    flex: 1;
+}
+
+.nombre-terapeuta-modal {
+    font-size: var(--texto-2xl);
+    color: var(--color-acento);
+    margin-bottom: var(--espacio-sm);
+    font-weight: 600;
+}
+
+.especialidad-terapeuta-modal {
+    font-size: var(--texto-base);
+    color: var(--texto-principal);
+    margin-bottom: var(--espacio-md);
+    line-height: 1.6;
+}
+
+.lema-terapeuta {
+    font-style: italic;
+    color: var(--texto-secundario);
+    font-size: var(--texto-sm);
+    border-left: 3px solid var(--color-acento);
+    padding-left: var(--espacio-md);
+}
+
+.secciones-terapeuta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xl);
+}
+
+.seccion-terapeuta h3 {
+    font-size: var(--texto-lg);
+    color: var(--color-acento);
+    margin-bottom: var(--espacio-md);
+    font-weight: 600;
+}
+
+.seccion-terapeuta p {
+    color: var(--texto-secundario);
+    line-height: 1.7;
+    margin-bottom: var(--espacio-md);
+}
+
+.seccion-terapeuta ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--espacio-md);
+}
+
+.seccion-terapeuta li {
+    position: relative;
+    padding-left: var(--espacio-xl);
+    margin-bottom: var(--espacio-sm);
+    color: var(--texto-secundario);
+    line-height: 1.6;
+}
+
+.seccion-terapeuta li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--color-acento);
+    font-weight: bold;
+}
+
+/* Responsive para modal de terapeuta */
+@media (max-width: 768px) {
+    .header-terapeuta {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--espacio-lg);
+    }
+    
+    .imagen-terapeuta-modal {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .contenido-terapeuta-modal {
+        padding: var(--espacio-md);
+    }
+}
+
+/* Formulario de Contacto */
+.formulario-contacto {
+    background: rgba(52, 73, 94, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: var(--radio-xl);
+    padding: var(--espacio-2xl);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .formulario-contacto {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: var(--espacio-md);
+    }
+    
+    .info-contacto::before {
+        visibility: hidden;
+    }
+}
+
+.grupo-campo {
+    position: relative;
+    margin-bottom: var(--espacio-xl);
+}
+
+.grupo-campo input,
+.grupo-campo textarea,
+.grupo-campo select {
+    background: rgba(26, 37, 47, 0.5);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    color: var(--texto-principal);
+    padding: var(--espacio-lg) var(--espacio-md);
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus,
+.grupo-campo select:focus {
+    border-color: var(--color-acento);
+    background: rgba(26, 37, 47, 0.8);
+}
+
+.grupo-campo label {
+    position: absolute;
+    top: var(--espacio-lg);
+    left: var(--espacio-md);
+    color: var(--texto-secundario);
+    transition: var(--transicion-normal);
+    pointer-events: none;
+    background: transparent;
+    padding: 0 var(--espacio-sm);
+}
+
+.grupo-campo input:focus + label,
+.grupo-campo textarea:focus + label,
+.grupo-campo select:focus + label,
+.grupo-campo input:not(:placeholder-shown) + label,
+.grupo-campo textarea:not(:placeholder-shown) + label,
+.grupo-campo select:not([value=""]) + label {
+    top: -10px;
+    left: var(--espacio-md);
+    font-size: var(--texto-sm);
+    color: var(--color-acento);
+    background: var(--fondo-secundario);
+}
+
+.boton-enviar {
+    width: 100%;
+    background: var(--gradiente-dorado);
+    color: var(--fondo-principal);
+    font-weight: 600;
+    padding: var(--espacio-md);
+    border-radius: var(--radio-lg);
+    font-size: var(--texto-sm);
+    transition: var(--transicion-normal);
+}
+
+.boton-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-dorada);
+}

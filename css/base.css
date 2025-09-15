@@ -1,0 +1,322 @@
+/* Estilos Base - Reset y configuración general */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Configuración del documento */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    font-size: var(--texto-base);
+    line-height: 1.6;
+    color: var(--texto-principal);
+    background: var(--gradiente-principal);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Tipografía base */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--espacio-md);
+    color: var(--texto-principal);
+}
+
+h1 {
+    font-size: var(--texto-5xl);
+}
+
+h2 {
+    font-size: var(--texto-4xl);
+}
+
+h3 {
+    font-size: var(--texto-3xl);
+}
+
+h4 {
+    font-size: var(--texto-2xl);
+}
+
+h5 {
+    font-size: var(--texto-xl);
+}
+
+h6 {
+    font-size: var(--texto-lg);
+}
+
+p {
+    margin-bottom: var(--espacio-md);
+    color: var(--texto-secundario);
+}
+
+/* Enlaces */
+a {
+    color: var(--color-acento);
+    text-decoration: none;
+    transition: var(--transicion-normal);
+}
+
+a:hover {
+    color: var(--color-acento-claro);
+    text-decoration: underline;
+}
+
+/* Listas */
+ul, ol {
+    margin-bottom: var(--espacio-md);
+    padding-left: var(--espacio-xl);
+}
+
+li {
+    margin-bottom: var(--espacio-sm);
+    color: var(--texto-secundario);
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botones base */
+button {
+    font-family: var(--fuente-moderna);
+    font-size: var(--texto-base);
+    border: none;
+    cursor: pointer;
+    transition: var(--transicion-normal);
+    border-radius: var(--radio-md);
+    padding: var(--espacio-md) var(--espacio-xl);
+}
+
+/* Formularios */
+input, textarea, select {
+    font-family: var(--fuente-moderna);
+    font-size: var(--texto-base);
+    border: 2px solid var(--color-secundario);
+    border-radius: var(--radio-md);
+    padding: var(--espacio-md);
+    background: var(--fondo-secundario);
+    color: var(--texto-principal);
+    transition: var(--transicion-normal);
+    width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Contenedores generales */
+.contenedor {
+    max-width: var(--ancho-contenedor);
+    margin: 0 auto;
+    padding: 0 var(--espacio-lg);
+}
+
+/* Utilidades de texto */
+.texto-centro {
+    text-align: center;
+}
+
+.texto-izquierda {
+    text-align: left;
+}
+
+.texto-derecha {
+    text-align: right;
+}
+
+.texto-chino {
+    font-family: var(--fuente-china);
+    font-weight: 300;
+    color: var(--color-acento);
+}
+
+.texto-chino-pequeno {
+    font-family: var(--fuente-china);
+    font-size: var(--texto-lg);
+    color: var(--color-acento);
+    display: block;
+    margin-bottom: var(--espacio-sm);
+}
+
+/* Utilidades de espaciado */
+.margen-superior-sm { margin-top: var(--espacio-sm); }
+.margen-superior-md { margin-top: var(--espacio-md); }
+.margen-superior-lg { margin-top: var(--espacio-lg); }
+.margen-superior-xl { margin-top: var(--espacio-xl); }
+
+.margen-inferior-sm { margin-bottom: var(--espacio-sm); }
+.margen-inferior-md { margin-bottom: var(--espacio-md); }
+.margen-inferior-lg { margin-bottom: var(--espacio-lg); }
+.margen-inferior-xl { margin-bottom: var(--espacio-xl); }
+
+.padding-sm { padding: var(--espacio-sm); }
+.padding-md { padding: var(--espacio-md); }
+.padding-lg { padding: var(--espacio-lg); }
+.padding-xl { padding: var(--espacio-xl); }
+
+/* Utilidades de display */
+.oculto {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-centro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--fondo-principal);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-acento);
+    border-radius: var(--radio-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-acento-claro);
+}
+
+/* Selección de texto */
+::selection {
+    background: var(--color-acento);
+    color: var(--fondo-principal);
+}
+
+::-moz-selection {
+    background: var(--color-acento);
+    color: var(--fondo-principal);
+}
+
+/* Accesibilidad */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus visible para accesibilidad */
+.focus-visible:focus {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 2px;
+}
+
+/* Animaciones base */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-180deg) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* Responsive base */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .contenedor {
+        padding: 0 var(--espacio-md);
+    }
+    
+    h1 {
+        font-size: var(--texto-4xl);
+    }
+    
+    h2 {
+        font-size: var(--texto-3xl);
+    }
+    
+    h3 {
+        font-size: var(--texto-2xl);
+    }
+}

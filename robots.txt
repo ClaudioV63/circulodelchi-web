@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Permitir acceso a archivos CSS y JavaScript
+Allow: /css/
+Allow: /img/
+Allow: /*.js
+Allow: /*.css
+
+# Sitemap
+Sitemap: https://www.circulodelchi.com.ar/sitemap.xml
+
+# Crawl-delay para ser respetuosos con los bots
+Crawl-delay: 1

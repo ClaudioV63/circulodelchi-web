@@ -1,0 +1,182 @@
+/* ===== RESPONSIVE MOBILE - MEJORAS DE LEGIBILIDAD ===== */
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    
+    /* Tamaños de fuente mejorados para móvil */
+    body {
+        font-size: var(--texto-base-mobile);
+        line-height: 1.6;
+    }
+    
+    /* Títulos principales */
+    h1 {
+        font-size: var(--texto-4xl-mobile) !important;
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: var(--texto-3xl-mobile) !important;
+        line-height: 1.3;
+    }
+    
+    h3 {
+        font-size: var(--texto-2xl-mobile) !important;
+        line-height: 1.4;
+    }
+    
+    h4 {
+        font-size: var(--texto-xl-mobile) !important;
+    }
+    
+    /* Hero Section */
+    .titulo-principal {
+        font-size: var(--texto-5xl-mobile) !important;
+        line-height: 1.1;
+        margin-bottom: var(--espacio-lg);
+    }
+    
+    .subtitulo-hero {
+        font-size: var(--texto-lg-mobile) !important;
+        line-height: 1.5;
+    }
+    
+    .descripcion-hero {
+        font-size: var(--texto-base-mobile) !important;
+        line-height: 1.6;
+    }
+    
+    /* Navegación */
+    .enlace-nav {
+        font-size: var(--texto-base-mobile) !important;
+        padding: var(--espacio-md) var(--espacio-lg);
+    }
+    
+    /* Servicios */
+    .titulo-servicio {
+        font-size: var(--texto-xl-mobile) !important;
+        line-height: 1.3;
+    }
+    
+    .descripcion-servicio {
+        font-size: var(--texto-base-mobile) !important;
+        line-height: 1.6;
+    }
+    
+    /* Terapeutas */
+    .nombre-terapeuta {
+        font-size: var(--texto-xl-mobile) !important;
+        line-height: 1.3;
+    }
+    
+    .especialidad-terapeuta {
+        font-size: var(--texto-base-mobile) !important;
+        line-height: 1.5;
+    }
+    
+    .descripcion-terapeuta {
+        font-size: var(--texto-sm-mobile) !important;
+        line-height: 1.6;
+    }
+    
+    /* Botones */
+    .boton-primario,
+    .boton-secundario,
+    .boton-conocer-mas {
+        font-size: var(--texto-sm-mobile) !important;
+        padding: var(--espacio-md) var(--espacio-lg);
+        min-height: 44px; /* Tamaño mínimo recomendado para touch */
+    }
+    
+    /* Formulario */
+    .grupo-campo label {
+        font-size: var(--texto-sm-mobile) !important;
+    }
+    
+    .grupo-campo input,
+    .grupo-campo textarea,
+    .grupo-campo select {
+        font-size: var(--texto-base-mobile) !important;
+        padding: var(--espacio-md);
+        min-height: 44px;
+    }
+    
+    /* Modal */
+    .nombre-terapeuta-modal {
+        font-size: var(--texto-2xl-mobile) !important;
+        line-height: 1.3;
+    }
+    
+    .especialidad-terapeuta-modal {
+        font-size: var(--texto-base-mobile) !important;
+        line-height: 1.5;
+    }
+    
+    .seccion-terapeuta h3 {
+        font-size: var(--texto-lg-mobile) !important;
+        line-height: 1.4;
+    }
+    
+    .seccion-terapeuta p,
+    .seccion-terapeuta li {
+        font-size: var(--texto-base-mobile) !important;
+        line-height: 1.6;
+    }
+    
+    /* Footer */
+    .texto-footer {
+        font-size: var(--texto-sm-mobile) !important;
+        line-height: 1.6;
+    }
+    
+    .texto-creditos {
+        font-size: var(--texto-sm-mobile) !important;
+    }
+    
+    /* Mejoras adicionales de legibilidad */
+    p {
+        font-size: var(--texto-base-mobile) !important;
+        line-height: 1.6;
+        margin-bottom: var(--espacio-md);
+    }
+    
+    /* Espaciado mejorado para móvil */
+    .seccion {
+        padding: var(--espacio-2xl) var(--espacio-md);
+    }
+    
+    .contenedor {
+        padding: 0 var(--espacio-md);
+    }
+    
+    /* Contraste mejorado para móvil */
+    .texto-secundario {
+        color: #b8c5d1; /* Un poco más claro para mejor legibilidad */
+    }
+}
+
+/* Media query para móviles muy pequeños */
+@media (max-width: 480px) {
+    
+    .titulo-principal {
+        font-size: var(--texto-4xl-mobile) !important;
+    }
+    
+    .subtitulo-hero {
+        font-size: var(--texto-base-mobile) !important;
+    }
+    
+    /* Asegurar que todos los textos sean legibles */
+    * {
+        font-size: inherit;
+    }
+    
+    /* Botones más grandes para touch */
+    .boton-primario,
+    .boton-secundario,
+    .boton-conocer-mas,
+    .boton-whatsapp-terapeuta {
+        min-height: 48px;
+        min-width: 48px;
+    }
+}

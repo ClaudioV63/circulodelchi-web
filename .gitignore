@@ -1,0 +1,4 @@
+# Ejemplo para un sitio estático
+.DS_Store
+*.log
+temp/

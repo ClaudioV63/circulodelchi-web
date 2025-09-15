@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Círculo del Chi - Centro de Terapias Chinas Ancestrales</title>
+    <meta name="description" content="Centro de terapias chinas ancestrales. Restaura el flujo natural de tu energía vital con técnicas milenarias de medicina tradicional china.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Noto+Serif+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/animaciones.css">
+    <link rel="stylesheet" href="css/responsive-mobile.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navegacion-principal" id="navegacionPrincipal">
+        <div class="contenedor-navegacion">
+            <div class="logo-navegacion">
+                <img src="img/CHI.jpg" alt="Círculo del Chi Logo" class="logo-imagen">
+                <span class="logo-texto">圓氣 Círculo del Chi</span>
+            </div>
+            <ul class="menu-navegacion">
+                <li><a href="#inicio" class="enlace-navegacion">Inicio</a></li>
+                <li><a href="#filosofia" class="enlace-navegacion">Filosofía</a></li>
+                <li><a href="#servicios" class="enlace-navegacion">Servicios</a></li>
+                <li><a href="#equipo" class="enlace-navegacion">Equipo</a></li>
+                <li><a href="#contacto" class="enlace-navegacion">Contacto</a></li>
+            </ul>
+            <button class="boton-menu-movil" id="botonMenuMovil">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="seccion-hero">
+        <div class="contenedor-hero">
+            <div class="circulo-yin-yang">
+                <img src="img/yin-yang.png" alt="Símbolo Yin Yang" class="yin-yang-simbolo">
+            </div>
+            <div class="contenido-hero">
+                <h1 class="titulo-principal">
+                    <span class="texto-chino">圓氣流轉</span>
+                    <span class="texto-principal">Círculo del Chi</span>
+                    <span class="subtitulo">Centro de Terapias Chinas Ancestrales</span>
+                    <p class="descripcion-titulo">Exaltación de la Cruz</p>
+                </h1>
+                <p class="descripcion-hero">
+                    El chi fluye como un círculo perfecto. Restaura el equilibrio natural de tu energía vital 
+                    con la sabiduría milenaria de la medicina tradicional china.
+                </p>
+                <div class="botones-hero">
+                    <button class="boton-primario" onclick="scrollToSection('servicios')">
+                        Descubre Nuestros Servicios
+                    </button>
+                    <button class="boton-secundario" onclick="scrollToSection('contacto')">
+                        Agenda tu Consulta
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="particulas-energia" id="particulasEnergia"></div>
+    </section>
+
+    <!-- Sección Filosofía -->
+    <section id="filosofia" class="seccion-filosofia">
+        <div class="contenedor-filosofia">
+            <div class="titulo-seccion-contenedor">
+                <h2 class="titulo-seccion">
+                    <span class="texto-chino-pequeno">哲學</span>
+                    Nuestra Filosofía
+                </h2>
+            </div>
+            
+            <div class="grid-filosofia">
+                <div class="tarjeta-filosofia" data-aos="fade-up">
+                    <div class="icono-filosofia">
+                        <div class="circulo-chi"></div>
+                    </div>
+                    <h3 class="titulo-tarjeta">El Chi Universal</h3>
+                    <p class="descripcion-tarjeta">
+                        En la filosofía china, el chi (qi) es la energía vital que fluye por todo el universo y nuestro cuerpo. 
+                        Como un círculo perfecto, esta energía debe fluir sin obstáculos para mantener la salud y el equilibrio.
+                    </p>
+                </div>
+
+                <div class="tarjeta-filosofia" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icono-filosofia">
+                        <div class="simbolo-yin-yang-pequeno"></div>
+                    </div>
+                    <h3 class="titulo-tarjeta">Armonía del Yin-Yang</h3>
+                    <p class="descripcion-tarjeta">
+                        En nuestro centro, honramos esta sabiduría milenaria. El símbolo del yin-yang representa la armonía de fuerzas opuestas y complementarias, 
+                        recordándonos que la salud verdadera surge del equilibrio perfecto entre todas las energías.
+                    </p>
+                </div>
+
+                <div class="tarjeta-filosofia" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icono-filosofia">
+                        <div class="simbolo-manos-curativas"></div>
+                    </div>
+                    <h3 class="titulo-tarjeta">Sabiduría Ancestral</h3>
+                    <p class="descripcion-tarjeta">
+                        Nuestro equipo de terapeutas certificados en medicina tradicional china te acompaña en este viaje 
+                        hacia el bienestar integral, utilizando técnicas ancestrales para restaurar el flujo natural de tu energía vital.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="seccion-servicios">
+        <div class="contenedor-servicios">
+            <div class="titulo-seccion-contenedor">
+                <h2 class="titulo-seccion">
+                    <span class="texto-chino-pequeno">服務</span>
+                    Nuestros Servicios
+                </h2>
+                <p class="subtitulo-seccion">
+                    Medicina tradicional china con técnicas milenarias para tu bienestar integral
+                </p>
+            </div>
+
+            <div class="grid-servicios-circular">
+                <!-- Servicio Central -->
+                <div class="servicio-central">
+                    <div class="circulo-central-servicios">
+                        <span class="texto-central">氣</span>
+                    </div>
+                </div>
+
+                <!-- Servicios en círculo -->
+                <div class="servicio-item" data-servicio="1" data-aos="zoom-in">
+                    <div class="icono-servicio">
+                        <img src="img/fitoterapia.jpg" alt="Fitoterapia" class="imagen-servicio">
+                    </div>
+                    <h3 class="titulo-servicio">Fitoterapia</h3>
+                    <p class="descripcion-servicio">Medicina herbal china</p>
+                </div>
+
+                <div class="servicio-item" data-servicio="3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icono-servicio">
+                        <img src="img/tuina.jpg" alt="Tuina" class="imagen-servicio">
+                    </div>
+                    <h3 class="titulo-servicio">Tuina</h3>
+                    <p class="descripcion-servicio">Masaje terapéutico</p>
+                </div>
+
+                <div class="servicio-item" data-servicio="5" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="icono-servicio">
+                        <img src="img/moxibustion.jpg" alt="Moxibustión" class="imagen-servicio">
+                    </div>
+                    <h3 class="titulo-servicio">Moxibustión</h3>
+                    <p class="descripcion-servicio">Calor terapéutico</p>
+                </div>
+
+                <div class="servicio-item" data-servicio="9" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="icono-servicio">
+                        <img src="img/dietoterapia.jpg" alt="Dietética China" class="imagen-servicio">
+                    </div>
+                    <h3 class="titulo-servicio">Dietoterapia China</h3>
+                    <p class="descripcion-servicio">Nutrición terapéutica</p>
+                </div>
+
+                <div class="servicio-item" data-servicio="8" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="icono-servicio">
+                        <img src="img/oligoelementos.jpg" alt="Auriculoterapia" class="imagen-servicio">
+                    </div>
+                    <h3 class="titulo-servicio">Terapia con Oligoelementos</h3>
+                    <p class="descripcion-servicio">Minerales esenciales</p>
+                </div>
+
+                <div class="servicio-item" data-servicio="7" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="icono-servicio">
+                        <img src="img/diagnostico.jpg" alt="Reflexología" class="imagen-servicio">
+                    </div>
+                    <h3 class="titulo-servicio">Diagnóstico</h3>
+                    <p class="descripcion-servicio">Evaluación integral</p>
+                </div>
+
+                <div class="servicio-item" data-servicio="6" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="icono-servicio">
+                        <img src="img/chikung.jpg" alt="Qigong" class="imagen-servicio">
+                    </div>
+                    <h3 class="titulo-servicio">Chikung</h3>
+                    <p class="descripcion-servicio">Ejercicios energéticos</p>
+                </div>
+
+                <div class="servicio-item" data-servicio="4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icono-servicio">
+                        <img src="img/ventosas.jpg" alt="Ventosas" class="imagen-servicio">
+                    </div>
+                    <h3 class="titulo-servicio">Ventosas</h3>
+                    <p class="descripcion-servicio">Terapia de succión</p>
+                </div>
+
+                <div class="servicio-item" data-servicio="2" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icono-servicio">
+                        <img src="img/acupuntura.jpg" alt="Acupuntura" class="imagen-servicio">
+                    </div>
+                    <h3 class="titulo-servicio">Acupuntura</h3>
+                    <p class="descripcion-servicio">Equilibrio energético</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Servicio -->
+    <div id="modalServicio" class="modal-servicio">
+        <div class="contenido-modal">
+            <button class="cerrar-modal" id="cerrarModal">&times;</button>
+            <div class="cuerpo-modal" id="cuerpoModal">
+                <!-- Contenido dinámico del servicio -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Equipo -->
+    <section id="equipo" class="seccion-equipo">
+        <div class="contenedor-equipo">
+            <div class="titulo-seccion-contenedor">
+                <h2 class="titulo-seccion">
+                    <span class="texto-chino-pequeno">團隊</span>
+                    Nuestro Equipo
+                </h2>
+                <p class="subtitulo-seccion">
+                    Terapeutas especializados en medicina tradicional china
+                </p>
+            </div>
+
+            <div class="grid-equipo">
+                <div class="tarjeta-terapeuta" data-aos="fade-up" data-terapeuta="gabriel">
+                    <div class="imagen-terapeuta">
+                        <img src="img/gabriel.jpg" alt="Gabriel Masip" class="imagen-terapeuta-foto">
+                    </div>
+                    <div class="info-terapeuta">
+                        <h3 class="nombre-terapeuta">Gabriel Masip</h3>
+                        <p class="especialidad-terapeuta">Terapeuta en Medicina China</p>
+                        <p class="descripcion-terapeuta">
+                            Especialista en Fitoterapia y Movimiento Funcional y Energético.
+                        </p>
+                        <div class="acciones-terapeuta">
+                            <button class="boton-conocer-mas" onclick="abrirModalTerapeuta('gabriel')">
+                                Conocer más
+                            </button>
+                            <a href="https://wa.me/541168226039?text=Hola%20Gabriel%2C%20quiero%20consultar%20sobre%20tus%20servicios%20de%20C%C3%ADrculo%20del%20Chi%3A" target="_blank" class="boton-whatsapp-terapeuta" aria-label="Contactar a Gabriel por WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tarjeta-terapeuta" data-aos="fade-up" data-aos-delay="200" data-terapeuta="laura">
+                    <div class="imagen-terapeuta">
+                        <img src="img/Laura.jpg" alt="Laura Aguirre" class="imagen-terapeuta-foto">
+                    </div>
+                    <div class="info-terapeuta">
+                        <h3 class="nombre-terapeuta">Laura Aguirre</h3>
+                        <p class="especialidad-terapeuta">Terapeuta en Medicina China</p>
+                        <p class="descripcion-terapeuta">
+                            Profesora de Taichi y Qi Gong.
+                        </p>
+                        <div class="acciones-terapeuta">
+                            <button class="boton-conocer-mas" onclick="abrirModalTerapeuta('laura')">
+                                Conocer más
+                            </button>
+                            <a href="https://wa.me/541150248975?text=Hola%20Laura%2C%20quiero%20consultar%20sobre%20tus%20servicios%20de%20C%C3%ADrculo%20del%20Chi%3A" target="_blank" class="boton-whatsapp-terapeuta" aria-label="Contactar a Laura por WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                <div class="tarjeta-terapeuta" data-aos="fade-up" data-aos-delay="400">
+                    <div class="imagen-terapeuta">
+                        <div class="placeholder-imagen"></div>
+                    </div>
+                    <div class="info-terapeuta">
+                        <h3 class="nombre-terapeuta">Maestro Zhang Jun</h3>
+                        <p class="especialidad-terapeuta">Instructor de Qigong y Tuina</p>
+                        <p class="descripcion-terapeuta">
+                            Heredero de técnicas ancestrales de masaje Tuina y ejercicios energéticos Qigong.
+                        </p>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Terapeuta -->
+    <div id="modalTerapeuta" class="modal-servicio">
+        <div class="contenido-modal">
+            <button class="cerrar-modal" id="cerrarModalTerapeuta">&times;</button>
+            <div class="cuerpo-modal" id="cuerpoModalTerapeuta">
+                <!-- Contenido dinámico del terapeuta -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="seccion-contacto">
+        <div class="contenedor-contacto">
+            <div class="titulo-seccion-contenedor">
+                <h2 class="titulo-seccion">
+                    <span class="texto-chino-pequeno">聯繫</span>
+                    Contacto
+                </h2>
+                <p class="subtitulo-seccion">
+                    Estamos aquí para ayudarte en tu camino hacia el bienestar
+                    <!--
+                    Inicia tu camino hacia el equilibrio y la sanación
+                    -->
+                </p>
+            </div>
+
+            <div class="grid-contacto">
+                <div class="info-contacto" data-aos="fade-right">
+                    <div class="item-contacto">
+                        <div class="icono-contacto">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="texto-contacto">
+                            <h4>Ubicación</h4>
+                            <p> Río Paraná 468, Parque Exaltación<br>Exaltación de la Cruz (RN8, km74)</p>
+                        </div>
+                    </div>
+
+                    <div class="item-contacto">
+                        <div class="icono-contacto">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="texto-contacto">
+                            <h4>Teléfono</h4>
+                            <p>+54 (11) 6822-6039</p>
+                        </div>
+                    </div>
+
+                    <div class="item-contacto">
+                        <div class="icono-contacto">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="texto-contacto">
+                            <h4>Email</h4>
+                            <p>gabrielmasip@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="item-contacto">
+                        <div class="icono-contacto">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="texto-contacto">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/541168226039?text=Hola%20quiero%20más%20información" target="_blank" class="enlace-whatsapp">Enviar mensaje</a></p>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="item-contacto">
+                        <div class="icono-contacto">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="texto-contacto">
+                            <h4>Horarios</h4>
+                            <p>Lun - Vie: 9:00 - 19:00<br>Sáb: 9:00 - 15:00</p>
+                        </div>
+                    </div>
+                    -->
+
+                </div>
+
+                <form class="formulario-contacto" data-aos="fade-left">
+                    <div class="grupo-campo">
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="nombre">Nombre Completo</label>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Correo Electrónico</label>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <input type="tel" id="telefono" name="telefono">
+                        <label for="telefono">Teléfono</label>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="fitoterapia">Fitoterapia</option>
+                            <option value="acupuntura">Acupuntura</option>
+                            <option value="tuina">Tuina</option>
+                            <option value="ventosas">Ventosas</option>
+                            <option value="moxibustion">Moxibustión</option>
+                            <option value="chikung">Chikung</option>
+                            <option value="diagnostico">Diagnóstico</option>
+                            <option value="oligoelementos">Terapia con Oligoelementos</option>
+                            <option value="dietoterapia">Dietoterapia China</option>
+                        </select>
+                        <label for="servicio">Servicio de Interés</label>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                        <label for="mensaje">Mensaje</label>
+                    </div>
+
+                    <button type="submit" class="boton-enviar">
+                        Enviar Consulta
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+            <div class="logo-footer">
+                <img src="img/CHI.jpg" alt="Círculo del Chi" class="logo-imagen-footer">
+                <span class="texto-logo-footer">圓氣</span>
+            </div>
+            <p class="texto-footer">
+                2024 Círculo del Chi. Todos los derechos reservados.<br>
+                Centro de Terapias Chinas Ancestrales
+            </p>
+            <div class="redes-sociales">
+                <!--
+                <a href="#" class="enlace-red-social" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="enlace-red-social" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/541168226039?text=Hola%20quiero%20más%20información" target="_blank" class="enlace-red-social" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                -->
+                <div class="creditos-diseno">
+                    <span class="texto-creditos">Diseñado e Implementado por Nexserver</span>
+                    <a href="https://www.nexserver.com.ar/estudio-web/" target="_blank" class="enlace-ws" aria-label="Nexserver">
+                        <img src="img/LogoWS.png" alt="Nexserver" class="logo-nexserver">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

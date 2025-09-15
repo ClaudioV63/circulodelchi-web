@@ -1,0 +1,365 @@
+/* Animaciones y Efectos */
+
+/* Animaciones principales */
+@keyframes rotacionSuave {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulsarSuave {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    }
+}
+
+@keyframes flujoEnergia {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-50px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-200px) scale(0.5);
+    }
+}
+
+@keyframes ondaExpansiva {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes levitar {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes brilloDorado {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    }
+}
+
+@keyframes aparecerDesdeAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerDesdeIzquierda {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aparecerDesdeDerecha {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Partículas de energía */
+.particulas-energia {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.particula {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--color-acento);
+    border-radius: var(--radio-circular);
+    animation: flujoEnergia 4s linear infinite;
+    opacity: 0;
+}
+
+.particula:nth-child(1) { left: 10%; animation-delay: 0s; }
+.particula:nth-child(2) { left: 20%; animation-delay: 0.5s; }
+.particula:nth-child(3) { left: 30%; animation-delay: 1s; }
+.particula:nth-child(4) { left: 40%; animation-delay: 1.5s; }
+.particula:nth-child(5) { left: 50%; animation-delay: 2s; }
+.particula:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+.particula:nth-child(7) { left: 70%; animation-delay: 3s; }
+.particula:nth-child(8) { left: 80%; animation-delay: 3.5s; }
+.particula:nth-child(9) { left: 90%; animation-delay: 4s; }
+
+/* Efectos hover para servicios */
+.servicio-item {
+    animation: levitar 3s ease-in-out infinite;
+}
+
+.servicio-item:nth-child(2) { animation-delay: 0s; }
+.servicio-item:nth-child(3) { animation-delay: 0.3s; }
+.servicio-item:nth-child(4) { animation-delay: 0.6s; }
+.servicio-item:nth-child(5) { animation-delay: 0.9s; }
+.servicio-item:nth-child(6) { animation-delay: 1.2s; }
+.servicio-item:nth-child(7) { animation-delay: 1.5s; }
+.servicio-item:nth-child(8) { animation-delay: 1.8s; }
+.servicio-item:nth-child(9) { animation-delay: 2.1s; }
+.servicio-item:nth-child(10) { animation-delay: 2.4s; }
+
+.servicio-item:hover {
+    animation: none;
+    z-index: 10;
+}
+
+/* Ondas expansivas para el centro */
+.circulo-central-servicios::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--color-acento);
+    border-radius: var(--radio-circular);
+    transform: translate(-50%, -50%);
+    animation: ondaExpansiva 3s ease-out infinite;
+    pointer-events: none;
+}
+
+.circulo-central-servicios::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--color-acento);
+    border-radius: var(--radio-circular);
+    transform: translate(-50%, -50%);
+    animation: ondaExpansiva 3s ease-out infinite 1.5s;
+    pointer-events: none;
+}
+
+/* Efectos de entrada para secciones */
+.seccion-filosofia .tarjeta-filosofia {
+    opacity: 0;
+    animation: aparecerDesdeAbajo 0.8s ease-out forwards;
+}
+
+.seccion-filosofia .tarjeta-filosofia:nth-child(1) { animation-delay: 0.2s; }
+.seccion-filosofia .tarjeta-filosofia:nth-child(2) { animation-delay: 0.4s; }
+.seccion-filosofia .tarjeta-filosofia:nth-child(3) { animation-delay: 0.6s; }
+
+.seccion-equipo .tarjeta-terapeuta {
+    opacity: 0;
+    animation: zoomIn 0.6s ease-out forwards;
+}
+
+.seccion-equipo .tarjeta-terapeuta:nth-child(1) { animation-delay: 0.2s; }
+.seccion-equipo .tarjeta-terapeuta:nth-child(2) { animation-delay: 0.4s; }
+.seccion-equipo .tarjeta-terapeuta:nth-child(3) { animation-delay: 0.6s; }
+
+/* Efectos de scroll */
+.titulo-seccion {
+    opacity: 0;
+    animation: aparecerDesdeAbajo 0.8s ease-out forwards;
+}
+
+.subtitulo-seccion {
+    opacity: 0;
+    animation: aparecerDesdeAbajo 0.8s ease-out 0.2s forwards;
+}
+
+/* Efectos para formulario */
+.formulario-contacto {
+    opacity: 0;
+    animation: aparecerDesdeDerecha 0.8s ease-out 0.3s forwards;
+}
+
+.info-contacto {
+    opacity: 0;
+    animation: aparecerDesdeIzquierda 0.8s ease-out 0.3s forwards;
+}
+
+/* Efectos de hover mejorados */
+.boton-primario,
+.boton-secundario {
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-primario::before,
+.boton-secundario::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radio-circular);
+    transform: translate(-50%, -50%);
+    transition: var(--transicion-rapida);
+}
+
+.boton-primario:hover::before,
+.boton-secundario:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Efectos de carga */
+.cargando {
+    position: relative;
+    overflow: hidden;
+}
+
+.cargando::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(212, 175, 55, 0.3),
+        transparent
+    );
+    animation: cargando 1.5s infinite;
+}
+
+@keyframes cargando {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Efectos de texto */
+.texto-brillante {
+    background: var(--gradiente-dorado);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: brilloTexto 3s ease-in-out infinite;
+}
+
+@keyframes brilloTexto {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.3);
+    }
+}
+
+/* Responsive para animaciones */
+@media (max-width: 768px) {
+    .grid-servicios-circular {
+        grid-template-columns: 1fr;
+        gap: var(--espacio-lg);
+        padding: var(--espacio-lg);
+    }
+    
+    .servicio-central {
+        grid-column: 1;
+        grid-row: 1;
+        order: -1;
+    }
+    
+    .servicio-item:nth-child(2) { grid-column: 1; grid-row: 2; }
+    .servicio-item:nth-child(3) { grid-column: 1; grid-row: 3; }
+    .servicio-item:nth-child(4) { grid-column: 1; grid-row: 4; }
+    .servicio-item:nth-child(5) { grid-column: 1; grid-row: 5; }
+    .servicio-item:nth-child(6) { grid-column: 1; grid-row: 6; }
+    .servicio-item:nth-child(7) { grid-column: 1; grid-row: 7; }
+    .servicio-item:nth-child(8) { grid-column: 1; grid-row: 8; }
+    .servicio-item:nth-child(9) { grid-column: 1; grid-row: 9; }
+    .servicio-item:nth-child(10) { grid-column: 1; grid-row: 10; }
+    
+    .yin-yang-simbolo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    /* Reducir animaciones en móviles para mejor rendimiento */
+    .servicio-item {
+        animation: none;
+    }
+    
+    .particulas-energia {
+        display: none;
+    }
+}
+
+/* Preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .yin-yang-simbolo {
+        animation: none;
+    }
+    
+    .particulas-energia {
+        display: none;
+    }
+}
