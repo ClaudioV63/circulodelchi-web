@@ -200,7 +200,7 @@ const datosTerapeutas = {
         contenido: `
             <div class="contenido-terapeuta-modal">
                 <div class="header-terapeuta">
-                    <img src="img/gabriel.jpg" alt="Gabriel Masip" class="imagen-terapeuta-modal">
+                    <img src="img/gabriel-.jpg" alt="Gabriel Masip" class="imagen-terapeuta-modal">
                     <div class="info-header-terapeuta">
                         <h2 class="nombre-terapeuta-modal">Gabriel Masip</h2>
                         <p class="especialidad-terapeuta-modal">🌿 Medicina China | Fitoterapia<br>⚡ Movimiento Funcional y Energético (Chi Kung)</p>
